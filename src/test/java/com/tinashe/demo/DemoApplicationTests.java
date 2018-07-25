@@ -3,7 +3,7 @@ package com.tinashe.demo;
 import com.tinashe.demo.dao.TaskRepository;
 import com.tinashe.demo.dao.UserRepository;
 import com.tinashe.demo.entity.User;
-import com.tinashe.demo.manager.UserManager;
+import com.tinashe.demo.service.UserService;
 import com.tinashe.demo.rest.V1Controller;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,7 +11,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
@@ -27,7 +26,7 @@ public class DemoApplicationTests {
 	@Autowired
 	UserRepository userRepository;
 
-	UserManager userManagerMock;
+	UserService userServiceMock;
 
 	@Autowired
 	V1Controller v1Controller;
@@ -39,7 +38,7 @@ public class DemoApplicationTests {
 
 		mockMvc = MockMvcBuilders.standaloneSetup(v1Controller).build();
 
-		userManagerMock = new UserManager() {
+		userServiceMock = new UserService() {
 
 			@Override
 			public User getUserInformation(Long id) {

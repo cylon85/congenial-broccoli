@@ -1,4 +1,4 @@
-package com.tinashe.demo.manager;
+package com.tinashe.demo.service;
 
 import com.tinashe.demo.dao.UserRepository;
 import com.tinashe.demo.entity.User;
@@ -10,7 +10,7 @@ import java.util.List;
 
 @Component
 @Transactional
-public class UserManagerImpl implements UserManager{
+public class UserServiceImpl implements UserService {
 
     @Autowired
     UserRepository userRepository;

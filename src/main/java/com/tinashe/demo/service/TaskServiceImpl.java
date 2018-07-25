@@ -1,4 +1,4 @@
-package com.tinashe.demo.manager;
+package com.tinashe.demo.service;
 
 import com.tinashe.demo.dao.TaskRepository;
 import com.tinashe.demo.dao.UserRepository;
@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.time.LocalDate;
 import java.util.List;
 
-public class TaskManagerImpl implements TaskManager {
+public class TaskServiceImpl implements TaskService {
     @Autowired
     UserRepository userRepository;
 
