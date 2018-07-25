@@ -68,7 +68,7 @@ public class V1Controller implements V1Api{
                                            @PathVariable("task_id") Long taskId,
                                            @RequestBody Task task) {
 
-        return new ResponseEntity<>(taskService.updateTask(userId, taskId, task), HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @Override
