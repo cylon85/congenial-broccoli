@@ -1,10 +1,10 @@
-package com.tinashe.demo.manager;
+package com.tinashe.demo.service;
 
 import com.tinashe.demo.entity.Task;
 
 import java.util.List;
 
-public interface TaskManager {
+public interface TaskService {
 
     Task getUserTaskInformation(Long userId, Long taskId);
 
